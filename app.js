@@ -17,10 +17,21 @@ new Vue({
       let damage = Math.max(Math.floor(Math.random() * max) + 1, min);
       this.demonHealth -= damage;
 
+      if (this.demonHealth <= 0) {
+        alert('You won!');
+        this.gameIsRunning = false;
+        return;
+      }
+
       max = 12;
       min = 5;
       damage = Math.max(Math.floor(Math.random() * max) + 1, min);
       this.playerHealth -= damage;
+
+      if (this.playerHealth <= 0) {
+        alert('You lost!');
+        this.gameIsRunning = false;
+      }
     },
     specialAttack: function() {
 

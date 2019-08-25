@@ -43,7 +43,7 @@
     </div>
   </section>
   <section class="cell controls" v-if="!gameIsRunning">
-    <button id="start-game">NEW GAME</button>
+    <button id="start-game" @click="startGame">NEW GAME</button>
   </section>
   <section class="cell controls" v-else>
     <button id="attack">ATTACK</button>

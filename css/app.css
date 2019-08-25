@@ -1,8 +1,16 @@
-.text-center {
+body {
+  font-family: "Raleway", sans-serif;
   text-align: center;
+  letter-spacing: 2px;
 }
 
-.healthbar {
+h1 {
+  font-family: "Metamorphous", cursive;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+}
+
+.health-bar {
   width: 80%;
   height: 40px;
   background-color: #eee;
@@ -12,7 +20,6 @@
 
 .controls, .log {
   margin-top: 30px;
-  text-align: center;
   padding: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 3px 6px #ccc;

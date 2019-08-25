@@ -45,7 +45,7 @@
   <section class="cell controls" v-if="!gameIsRunning">
     <button id="start-game">NEW GAME</button>
   </section>
-  <section class="cell controls">
+  <section class="cell controls" v-else>
     <button id="attack">ATTACK</button>
     <button id="special-attack">SPECIAL ATTACK</button>
     <button id="heal">HEAL</button>

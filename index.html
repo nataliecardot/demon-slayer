@@ -23,8 +23,7 @@
       <h2>YOU</h2>
       <div class="health-bar">
         <div
-          class="health-bar"
-          style="background-color: green; margin: 0; color: white;"
+          class="remaining-health"
           :style="{ width: playerHealth + '%' }"
         >
           {{ playerHealth }}
@@ -35,8 +34,7 @@
       <h2>DEMON</h2>
       <div class="health-bar">
         <div
-          class="health-bar"
-          style="background-color: green; margin: 0; color: white;"
+          class="remaining-health"
           :style="{ width: demonHealth + '%' }"
         >
           {{ demonHealth }}

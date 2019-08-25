@@ -22,7 +22,11 @@
     <div class="cell small-6">
       <h2>YOU</h2>
       <div class="health-bar">
-        <div class="health-bar" style="background-color: green; margin: 0; color: white;">
+        <div
+          class="health-bar"
+          style="background-color: green; margin: 0; color: white;"
+          :style="{ width: playerHealth + '%' }"
+        >
           {{ playerHealth }}
         </div>
       </div>
@@ -30,7 +34,11 @@
     <div class="cell small-6">
       <h2>DEMON</h2>
       <div class="health-bar">
-        <div class="health-bar" style="background-color: green; margin: 0; color: white;">
+        <div
+          class="health-bar"
+          style="background-color: green; margin: 0; color: white;"
+          :style="{ width: demonHealth + '%' }"
+        >
           {{ demonHealth }}
         </div>
       </div>

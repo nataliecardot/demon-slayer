@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demon Slayer</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+  <script defer src="app.js"></script>
+
+  <!-- Only using CSS for Foundation, no JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw==" crossorigin="anonymous"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Metamorphous|Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
-  <script defer src="app.js"></script>
+
 </head>
 <body>
 <div id="app" class="grid-container">
@@ -19,7 +23,7 @@
       <h2>YOU</h2>
       <div class="health-bar">
         <div class="health-bar" style="background-color: green; margin: 0; color: white;">
-
+          {{ playerHealth }}
         </div>
       </div>
     </div>
@@ -27,13 +31,13 @@
       <h2>DEMON</h2>
       <div class="health-bar">
         <div class="health-bar" style="background-color: green; margin: 0; color: white;">
-
+          {{ demonHealth }}
         </div>
       </div>
     </div>
   </section>
   <section class="cell controls">
-    <button id="start-game">START NEW GAME</button>
+    <button id="start-game">NEW GAME</button>
   </section>
   <section class="cell controls">
     <button id="attack">ATTACK</button>

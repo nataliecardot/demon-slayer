@@ -65,6 +65,10 @@ button {
   margin: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 #start-game {
   background-color: #7ad47a;
 }

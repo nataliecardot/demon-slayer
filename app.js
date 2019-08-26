@@ -29,7 +29,7 @@ new Vue({
       this.demonAttack();
     },
     giveUp: function() {
-
+      this.gameIsRunning = false;
     },
     demonAttack: function() {
       this.playerHealth -= this.calculateDamage(5, 12);

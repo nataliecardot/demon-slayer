@@ -18,7 +18,9 @@ new Vue({
       this.checkScore();
     },
     specialAttack: function() {
-
+      this.demonHealth -= this.calculateDamage(10, 20);
+      this.playerHealth -= this.calculateDamage(5, 12);
+      this.checkScore();
     },
     heal: function() {
 

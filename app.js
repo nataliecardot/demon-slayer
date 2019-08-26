@@ -13,20 +13,22 @@ new Vue({
     },
     attack: function() {
       this.demonHealth -= this.calculateDamage(3, 10);
-      this.playerHealth -= this.calculateDamage(5, 12);
-
       this.checkScore();
+      this.demonAttack();
     },
     specialAttack: function() {
       this.demonHealth -= this.calculateDamage(10, 20);
-      this.playerHealth -= this.calculateDamage(5, 12);
-      this.checkScore();
+      this.demonAttack();
     },
     heal: function() {
 
     },
     giveUp: function() {
 
+    },
+    demonAttack: function() {
+      this.playerHealth -= this.calculateDamage(5, 12);
+      this.checkScore();
     },
     calculateDamage: function(min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min);

@@ -21,7 +21,8 @@ new Vue({
       this.demonAttack();
     },
     heal: function() {
-
+      this.playerHealth += 10;
+      this.demonAttack();
     },
     giveUp: function() {
 

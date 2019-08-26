@@ -21,7 +21,11 @@ new Vue({
       this.demonAttack();
     },
     heal: function() {
-      this.playerHealth += 10;
+      if (this.playerHealth <= 90) {
+        this.playerHealth += 10;
+      } else {
+        this.playerHealth = 100;
+      }
       this.demonAttack();
     },
     giveUp: function() {

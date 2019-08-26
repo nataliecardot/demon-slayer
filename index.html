@@ -24,9 +24,9 @@
       <div class="health-bar">
         <div
           class="remaining-health"
-          :style="{ width: playerHealth + '%' }"
+          :style="{ width: playerHealth >= 0 ? playerHealth + '%' : 0 }"
         >
-          {{ playerHealth }}
+          {{ playerHealth <= 0 ? null : playerHealth }}
         </div>
       </div>
     </div>
@@ -35,9 +35,9 @@
       <div class="health-bar">
         <div
           class="remaining-health"
-          :style="{ width: demonHealth + '%' }"
+          :style="{ width: demonHealth >= 0 ? demonHealth + '%' : 0 }"
         >
-          {{ demonHealth }}
+          {{ demonHealth <= 0 ? null : demonHealth }}
         </div>
       </div>
     </div>

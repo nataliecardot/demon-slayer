@@ -51,10 +51,10 @@
     <button id="heal" @click="heal">HEAL</button>
     <button id="give-up" @click="giveUp">GIVE UP</button>
   </section>
-  <section class="cell log">
+  <section class="cell log" v-if="turns.length > 0">
     <ul>
-      <li>
-
+      <li v-for="turn in turns">
+        {{ turn.text }}
       </li>
     </ul>
   </section>

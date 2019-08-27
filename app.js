@@ -3,21 +3,33 @@ new Vue({
   data: {
     playerHealth: 100,
     demonHealth: 100,
-    gameIsRunning: false
+    gameIsRunning: false,
+    turns: []
   },
   methods: {
     startGame: function() {
       this.gameIsRunning = true;
-      this.playerHealth = 100,
-      this.demonHealth = 100
+      this.playerHealth = 100;
+      this.demonHealth = 100;
+      this.turns = [];
     },
     attack: function() {
-      this.demonHealth -= this.calculateDamage(3, 10);
+      let damage = this.calculateDamage(3, 10);
+      this.demonHealth -= damage;
+      this.turns.unshift({
+        isPlayer: true,
+        text: `Player hits demon for ${damage} health points`
+      });
       this.checkScore();
       this.demonAttack();
     },
     specialAttack: function() {
-      this.demonHealth -= this.calculateDamage(10, 20);
+      let damage = this.calculateDamage(10, 20)
+      this.demonHealth -= damage;
+      this.turns.unshift({
+        isPlayer: true,
+        text: `Player hits demon hard for ${damage} health points`
+      });
       this.demonAttack();
     },
     heal: function() {
@@ -26,13 +38,22 @@ new Vue({
       } else {
         this.playerHealth = 100;
       }
+      this.turns.unshift({
+        isPlayer: true,
+        text: `Player heals by 10 health points`
+      });
       this.demonAttack();
     },
     giveUp: function() {
       this.gameIsRunning = false;
     },
     demonAttack: function() {
-      this.playerHealth -= this.calculateDamage(5, 12);
+      let damage = this.calculateDamage(5, 12);
+      this.playerHealth -= damage;
+      this.turns.unshift({
+        isPlayer: false,
+        text: `Demon hits player for ${damage} health points`
+      });
       this.checkScore();
     },
     calculateDamage: function(min, max) {

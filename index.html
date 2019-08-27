@@ -13,7 +13,9 @@
   <!-- Only using CSS for Foundation, no JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
 
-  <link href="https://fonts.googleapis.com/css?family=Metamorphous|Raleway&display=swap" rel="stylesheet">
+  <!-- Using preload to try to prevent fallback font from initially appearing. Explanation of preload with Google Font link: https://ashton.codes/preload-google-fonts-using-resource-hints/ -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Metamorphous|Raleway&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Metamorphous|Raleway&display=swap">
   <link rel="stylesheet" href="css/app.css">
 
 </head>

@@ -44,6 +44,10 @@ h2 {
   font-size: 22px;
 }
 
+ul {
+  margin-left: 0;
+}
+
 .log ul {
   list-style: none;
   font-weight: bold;
@@ -114,4 +118,14 @@ button:hover {
 
 #give-up:hover {
   background-color: #acacac;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
 }

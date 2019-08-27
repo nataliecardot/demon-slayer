@@ -53,7 +53,10 @@
   </section>
   <section class="cell log" v-if="turns.length > 0">
     <ul>
-      <li v-for="turn in turns">
+      <li
+        v-for="turn in turns"
+        :class="{ 'player-turn': turn.isPlayer, 'demon-turn': !turn.isPlayer }"
+      >
         {{ turn.text }}
       </li>
     </ul>

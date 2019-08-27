@@ -7,13 +7,14 @@ new Vue({
     turns: []
   },
   methods: {
-    startGame: function() {
+    // Using ES6 method shorthand (rather than using startGame: function(), for example)
+    startGame() {
       this.gameIsRunning = true;
       this.playerHealth = 100;
       this.demonHealth = 100;
       this.turns = [];
     },
-    attack: function() {
+    attack() {
       let damage = this.calculateDamage(3, 10);
       this.demonHealth -= damage;
       this.turns.unshift({
@@ -23,7 +24,7 @@ new Vue({
       this.checkScore();
       this.demonAttack();
     },
-    specialAttack: function() {
+    specialAttack() {
       let damage = this.calculateDamage(10, 20)
       this.demonHealth -= damage;
       this.turns.unshift({
@@ -32,7 +33,7 @@ new Vue({
       });
       this.demonAttack();
     },
-    heal: function() {
+    heal() {
       if (this.playerHealth <= 90) {
         this.playerHealth += 10;
       } else {
@@ -44,10 +45,10 @@ new Vue({
       });
       this.demonAttack();
     },
-    giveUp: function() {
+    giveUp() {
       this.gameIsRunning = false;
     },
-    demonAttack: function() {
+    demonAttack() {
       let damage = this.calculateDamage(5, 12);
       this.playerHealth -= damage;
       this.turns.unshift({
@@ -56,10 +57,10 @@ new Vue({
       });
       this.checkScore();
     },
-    calculateDamage: function(min, max) {
+    calculateDamage(min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min);
     },
-    checkScore: function() {
+    checkScore() {
       // Note: Expected behavior in Firefox but not Chrome: if user clicks 'cancel' when asked "New game?", the updated value for demon or player is shown after clicking cancel in Chrome but before popup in Firefox. Also, loser's health changes to zero before popup in Firefox but not Chrome. TODO: Find solution that also works in Chrome
       if (this.demonHealth <= 0) {
         this.$nextTick().then(() => {

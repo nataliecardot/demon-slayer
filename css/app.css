@@ -58,6 +58,10 @@ ul {
   margin: 5px;
 }
 
+ul li:last-child {
+  margin-bottom: 0;
+}
+
 .log ul .player-turn {
   color: #2f45c0;
   background-color: #e4e8ff;

@@ -7,7 +7,7 @@ body {
 h1 {
   font-family: "Metamorphous", cursive;
   letter-spacing: 3px;
-  margin-top: 1.1rem;
+  margin-top: 1.2rem;
   font-size: 2.5rem;
 }
 
@@ -131,6 +131,15 @@ button:hover {
   }
 
   h2 {
+    margin-top: 0.5rem;
     font-size: 1.15rem;
+  }
+
+  section.cell.log {
+    margin-bottom: 1.2rem;
+  }
+
+  .health-bar {
+    width: 90%;
   }
 }
